@@ -9,22 +9,16 @@ import axios from 'axios';
 
 function App() {
 
-  const [data, setdata] = useState({
-   
-    Brand: '',
-    explanation: '',
-    Price : ''
-  })
+  const [data, setdata] = useState([])
   useEffect(() => {
-    axios.get('http://localhost:3000/products')
+    axios.get('http://localhost:3000/products/')
       .then(res => setdata(res.data))
   }, [])
 
 
   return (
     <>
-
-      <Navbar />
+     <Navbar/>
 
       <section id='sectionTwo'>
 
@@ -60,25 +54,28 @@ function App() {
 
 
       <section id='products'>
+        <h1 className='mb-5'>Featured Products</h1>
         <div className="container">
-          <h2>Featured Products</h2>
           <div className="row">
-            <div className="col-4" style={{ background: 'red', height: '450px' }}>
-              <div className='products__brand'>{Brand}</div>
-              <div className='products__text'>{explanation}</div>
-              <div className='price'>{Price}</div>
-              
-            </div>
-            {/* <div className="col-4"></div>
-            <div className="col-4"></div> */}
-
+            {/* <div className="col-4 box">
+              <div className="prod__image"></div>
+            </div> */}
+            {data.map((element, i) =>
+              <div className="col-4 box mb-5">
+                <div className="prod__image"></div>
+                <div className='prod__text'>
+                  <h6 className='product-price'>{element.brand}</h6>
+                  <p>{element.about}</p>
+                  <h6 className='product-price'>{element.price}</h6>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
 
-      {
-        data.map((element, i) => <p key={i}> {element.Brand}  </p>)
-      }
+
+     
 
     </>
   )

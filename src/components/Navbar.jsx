@@ -52,6 +52,7 @@ export const Navbar = () => {
                     <li>Cataloge</li>
                     <li>New Arrivals</li>
                     <li>Contact</li>
+                    <li>Add</li>
                 </ul>
             </div>
 
