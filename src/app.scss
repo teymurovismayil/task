@@ -104,7 +104,6 @@ $text-color : rgb(43, 52, 226);
 }
 
 #products {
-    border: 1px solid blueviolet;
     width: 100%;
     height: auto;
     margin-top: 160px;
@@ -117,12 +116,15 @@ $text-color : rgb(43, 52, 226);
     .prod__image {
         width: 100%;
         height: 300px;
-        background-color: blue;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     .prod__text {
         height: 200px;
-        background-color: aqua;
         @include average();
         flex-direction: column;
     }
@@ -132,3 +134,21 @@ $text-color : rgb(43, 52, 226);
     }
 }
 
+
+th {
+    border: 2px solid black;
+}
+td {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.tableImg {
+    width: 70px;
+    height: 70px;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

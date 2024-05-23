@@ -6,6 +6,7 @@ import { FaBasketShopping } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
 
@@ -52,7 +53,7 @@ export const Navbar = () => {
                     <li>Cataloge</li>
                     <li>New Arrivals</li>
                     <li>Contact</li>
-                    <li>Add</li>
+                    <Link to='/admin'><li>Admin</li></Link>
                 </ul>
             </div>
 
