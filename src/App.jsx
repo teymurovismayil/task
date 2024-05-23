@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from './pages/Home';
 import Admin from './pages/Admin';
 import { AddPages } from './pages/AddPages';
+import Edit from './pages/Edit';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route element={<Home/>} path='/'></Route>
       <Route element={<Admin/>} path='/admin'></Route>
       <Route element={<AddPages/>} path='/addpage'></Route>
+      <Route element={<Edit/>} path='/edit/:id'></Route>
 
      </Routes>
 
