@@ -3,6 +3,8 @@ import axios from 'axios';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from '../components/Navbar';
 import { Slogan } from '../components/Slogan';
+import Bigsales from '../components/Bigsales';
+import Footer from '../components/Footer';
 
 
 function Home() {
@@ -71,6 +73,9 @@ function Home() {
                     </div>
                 </div>
             </section>
+            
+            <Bigsales/>
+            <Footer/>
 
         </>
     )
